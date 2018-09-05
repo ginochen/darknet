@@ -272,8 +272,9 @@ void backward_network(network *netp)
     int i;
     network orig = net;
     for(i = net.n-1; i >= 0; --i){
+        printf("stopbackward gino!");
         layer l = net.layers[i];
-        if(l.stopbackward) break;
+        if(l.stopbackward)  break;
         if(i == 0){
             net = orig;
         }else{
